@@ -1,3 +1,36 @@
+
+#Forum - E-Commerce Website
+
+
+#Provide a description of the application use case scenario that you have selected for your final
+project.
+This application is a limited selection e-commerce website stocking a variety of essential products i.e Household, Grocery and Apparel. It employs the Builder Pattern which allows us to build a complex object step by step. Through which the selected product is generated with product details, added to a cart, could be removed from the cart and cart is checked out. 
+
+#Use Case Scenario
+A customer needs to pick up some essentials where she logs on to this e-commerce website. The customer would be the primary actor using this system. The system contains an inventory of products: Grocery, Household and Apparel, 
+a shopping cart and quantity selection. The goal is it to easily browse the product list, add it to the shopping cart, remove it and checkout their cart when they are ready.  
+
+
+#Describe what are your main software design concepts regarding this application.
+Using the Builder Design Pattern for this project helped craft the functionality of this e-commerce website. The Director class containing the Construct() refers to the Builder interface to initiate building the parts of a complex object. This interface is then implemented by ProductBuilder (ConcreteBuilder) which generates an abstract Product class that is extended by the ConcreteProduct classes (Household, Grocery and Apparel) which return the User selected product i.e Windex from Household, Handbag from Apparel. 
+
+#What are the design goals in your project?
+The design goal was to encapsulate code for construction and representation 
+as needed to accomodate a variety of products without having to hard-code and avoid duplicate code. It allows for more control over constructing more complex objects. This pattern entails referencing and delegating responsibility
+down to the generation of a specific Product. 
+
+#How is the flexibility, of your implementation, e.g., how you add or remove in future new types?
+It is a flexible system as it allows us to vary internal representation yet going forward in the future a separate ConcreteBuilder  would be necessary if new type of products have to be added/
+
+#How is the simplicity and understandability of your implementation?
+It's a simple implementation where the ProductBuilder class implements the Builder interface to generate a Product object with common attributes for all products which is then extended by class of the user selected product e.g. Household. 
+
+#How you avoided duplicated code? 
+Use of this design pattern allowed encapsulation of code for construction of the final product which helped us avoid repetition of the same code. 
+
+Github Repo Link: https://github.com/alina-akram/metcs-met-cs665-assignment-project-alina-akram
+
+
 # Project Template
 
 This is a Java Maven Project Template

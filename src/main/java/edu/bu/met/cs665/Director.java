@@ -1,3 +1,11 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
+
 package edu.bu.met.cs665;
 
 public class Director {
@@ -5,13 +13,13 @@ public class Director {
     String[][] productList;
 
     public Director(String[][] productList) {
-        //consturcter
+        //constructor
         this.productList = productList;
-
 
     }
 
-    public void Construct(Builder current, int num) { //
+    public void Construct(Builder current, int num) {
+        //Construct to create product
         String[] currentProduct = productList[num];
         if (currentProduct[2].equals("Household")) { //.equals for string comparison/look up operators ==/=
             current.buildHousehold(currentProduct[0], Double.parseDouble(currentProduct[1]), currentProduct[2],

@@ -1,3 +1,10 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
 package edu.bu.met.cs665;
 
 public class Apparel extends Product {
@@ -5,6 +12,7 @@ public class Apparel extends Product {
     private String genderType;
 
     public Apparel(String name, double price, String category, String seasonType, String genderType){
+        //constructor
         super(name,price,category);
         this.seasonType = seasonType;
         this.genderType = genderType;
@@ -13,9 +21,10 @@ public class Apparel extends Product {
 
     @Override
     public void displayProductDetails() {
-        System.out.println(name + "Has been selected " + " Product Details: "+ " Product: " + name + " Price:  " + price
-                + ", Category:  " + category +  "  ,Season Type: "  +
-                seasonType + " ,Gender:  " + genderType);
+        //method to display product details
+        System.out.println(name + " Has been selected " + " Product Details: "+ " Product: " + name + " Price:  " + price
+                + " Category:  " + category +  "  Season Type: "  +
+                seasonType + " Gender:  " + genderType);
 
 
 

@@ -1,14 +1,21 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
 package edu.bu.met.cs665;
 
 public abstract class Product {
-    //instance var dec
-    //protected means it'll still be abstracted but be accessible to it's child classes/ private wouldn't have allowed this.var
+
+
     protected String name;
     protected double price;
     protected String category;
 
     public Product(String name, double price, String category){
-        //constructer
+        //constructor
         this.name = name;
         this.price = price;
         this.category = category;
@@ -16,11 +23,14 @@ public abstract class Product {
 
 
     public abstract void displayProductDetails();
+    //to display product details in individual product classes
 
     public double getPrice() {
+        //method to get product price
         return price;
     }
     public String getName(){
+        //method to get product name
         return name;
     }
 }

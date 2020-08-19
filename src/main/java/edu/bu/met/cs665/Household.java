@@ -1,3 +1,10 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
 package edu.bu.met.cs665;
 
 public class Household extends Product{
@@ -5,6 +12,7 @@ public class Household extends Product{
     private boolean isPowered;
 
     public Household(String name, double price, String category, String decorType, boolean isPowered){
+        //constructor
         super(name, price, category);
         this.decorType = decorType;
         this.isPowered = isPowered;
@@ -13,9 +21,9 @@ public class Household extends Product{
 
     @Override
     public void displayProductDetails() {
-        //ToDo fix the print format
-        System.out.println(name + "Has been selected " + " Product Details: "+ " Product: " + name + " Price:  " + price
-                + ", Category:  " + category + ",Decor Type: "
+        //display product details
+        System.out.println(name + " Has been selected " + " Product Details: "+ " Product: " + name + " Price:  " + price
+                + " Category:  " + category + " Decor Type: "
                + decorType + " Powered:  " + isPowered);
 
 

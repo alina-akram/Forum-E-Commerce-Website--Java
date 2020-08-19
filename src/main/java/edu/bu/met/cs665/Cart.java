@@ -1,3 +1,11 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
+
 package edu.bu.met.cs665;
 
 import java.util.ArrayList;
@@ -8,33 +16,26 @@ public class Cart {
 
 
     public Cart(){
-        //constructer
-        cartItems = new ArrayList<Product>(); //AL constructur
+        //constructor
+        cartItems = new ArrayList<Product>();
         quantityList = new ArrayList<Integer>();
-
-
     }
 
     public void addToCart(Product p, int quantity){
-        //check item existence
+        //adding item to cart
         if (cartItems.contains(p)){
             quantityList.set(cartItems.indexOf(p), quantity +
-                    quantityList.get(cartItems.indexOf(p))); //gets index of item p/sets corresponding quantity
-
+                    quantityList.get(cartItems.indexOf(p)));
         }
         else{
             cartItems.add(p);
             quantityList.add(quantity);
-
         }
-
-//        cartItems.add(p); //adding p to our list
-
     }
 
     public void  removeFromCart(int selection, int quantity){
-        if (selection >= 0 && selection < cartItems.size()){ //existence
-            //check qty
+        //remove item from cart
+        if (selection >= 0 && selection < cartItems.size()){
             if (quantityList.get(selection) > quantity){
                 quantityList.set(selection, quantityList.get(selection) - quantity);
 
@@ -42,37 +43,31 @@ public class Cart {
             else if(quantityList.get(selection) == quantity){
                 cartItems.remove(selection);
                 quantityList.remove(selection);
-
             }
-//            quantityList.set(cartItems.indexOf(p), quantity +
-//                    quantityList.get(cartItems.indexOf(p))); //gets index of item p/sets corresponding quantity
 
         }
         else{
             return;
-
         }
-
-
-
     }
 
     public void checkout(){
-        //returns price
+        //method to check out cart and return total price
 
         double sumOfPrice = 0;
 
-        for ( int i = 0; i < cartItems.size(); i ++){
+        for( int i = 0; i < cartItems.size(); i ++) {
             sumOfPrice += (cartItems.get(i)).getPrice();
-
         }
         System.out.println("Your cart is ready for checkout");
         printCart();
         System.out.println("Your total is: $ " + sumOfPrice);
+        System.out.println("Thank you for shopping at Forum! We hope to see you again");
 
     }
 
-    public void printCart(){ //void because printing not returning
+    public void printCart(){
+        //displays the cart items
         for (int i = 0; i < cartItems.size(); i++) {
             //displaying products
             System.out.print(i + "\t" + quantityList.get(i)+ "x ");
@@ -80,7 +75,4 @@ public class Cart {
         }
 
     }
-
-
-
 }

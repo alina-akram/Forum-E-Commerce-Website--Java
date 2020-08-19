@@ -1,3 +1,10 @@
+/**
+ * Alina Akram
+ * Course CS-665
+ * Summer 2
+ * Term Project
+ * August 18, 2020
+ */
 package edu.bu.met.cs665;
 
 public class Grocery extends Product{
@@ -6,7 +13,7 @@ public class Grocery extends Product{
 
 
     public Grocery(String name, double price, String category,boolean isProduce,boolean isFrozen){
-        //consturcter
+        //constructor
         super(name, price, category);
         this.isProduce = isProduce;
         this.isFrozen = isFrozen;
@@ -15,9 +22,10 @@ public class Grocery extends Product{
 
     @Override
     public void displayProductDetails() {
+        //method to display product details
         System.out.println(name + "Has been selected " + " Product Details: "+ " Product: " + name + " Price:  " + price
-                + ", Category:  " + category + ",Decor Type: "
-              + ", Produce: "  + isProduce + " Frozen:  " + isFrozen);
+                + " Category:  " + category + " Decor Type: "
+              + " Produce: "  + isProduce + " Frozen:  " + isFrozen);
 
     }
 }
